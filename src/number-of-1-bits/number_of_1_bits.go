@@ -2,9 +2,8 @@ package number_of_1_bits
 
 func HammingWeight(num uint32) int {
 	times := 0
-	for num != 0 {
-		times ++
-		num &= num-1
+	for ; num != 0; times++ {
+		num &= num - 1
 	}
 	return times
 }
