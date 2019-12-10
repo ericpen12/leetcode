@@ -14,7 +14,7 @@
 
 | 题号 | 难度 | 原题链接 | 题解 | 出现频率 |
 | ---- | ---- | ---- | ---- | ---- |
-| 62   | 中等 | [不同路径](https://leetcode-cn.com/problems/unique-paths/)   | [不同路径](src/unique-paths/solution)           | 中 |
+| 62   | 中等 | [不同路径](https://leetcode-cn.com/problems/unique-paths/)   | [不同路径](src/unique-paths/solution.md)    | 中 |
 |      |      |      |      |      |
 |      |      |      |      |      |
 |      |      |      |      |      |
