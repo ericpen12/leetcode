@@ -8,7 +8,9 @@ func UniquePathsWithObstacles(obstacleGrid [][]int) int {
 		for j := 0; j < length; j++ {
 			if v[j] == 1 {
 				mn[j] = 0
-			}else if j > 0 {
+				continue
+			}
+			if j >= 1 {
 				mn[j] += mn[j-1]
 			}
 		}
