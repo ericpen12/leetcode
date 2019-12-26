@@ -9,6 +9,8 @@
 
 这个题最大的问题在于**2个不同长度的链表如何处理**，此处给出的处理方法是 **补值**，若当前结点不为空，则取出val, 若为空 val 为 0
 
+注意：逢十进一以及取个位上数的写法
+
 ```go
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	pre := &ListNode{
@@ -59,6 +61,30 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 ### 代码精选：
 
 ```java
-
+public class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode c1 = l1;
+        ListNode c2 = l2;
+        ListNode sentinel = new ListNode(0);
+        ListNode d = sentinel;
+        int sum = 0;
+        while (c1 != null || c2 != null) {
+            sum /= 10;
+            if (c1 != null) {
+                sum += c1.val;
+                c1 = c1.next;
+            }
+            if (c2 != null) {
+                sum += c2.val;
+                c2 = c2.next;
+            }
+            d.next = new ListNode(sum % 10);
+            d = d.next;
+        }
+        if (sum / 10 == 1)
+            d.next = new ListNode(1);
+        return sentinel.next;
+    }
+}
 ```
 
