@@ -14,7 +14,7 @@
 
 | 题号 | 难度 | 原题链接                                                     | 题解                                                         |
 | ---- | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 94   | 中等 | [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) | [二叉树的中序遍历](src/binary-tree-inorder-traversal/ssolution.md) |
+| 94   | 中等 | [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) | [二叉树的中序遍历](src/binary-tree-inorder-traversal/solution.md) |
 
 
 
