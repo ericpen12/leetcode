@@ -23,7 +23,7 @@ func helper(root *TreeNode) {
 	}
 }
 
-// Iterative 
+// Iterative
 func inorderTraversal2(root *TreeNode) []int {
 	traversePath := make([]int, 0)
 	stack := make([]*TreeNode, 0)
