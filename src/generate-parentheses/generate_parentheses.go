@@ -1,29 +1,22 @@
-package main
+package generate_parentheses
 
-import "fmt"
+var arr []string
 
 func generateParenthesis(n int) []string {
 	arr := make([]string, 0)
-	generate(0, 0, n,"", &arr)
+	generate(0, 0, n,"")
 	return arr
 }
 
-func generate(left int, right int, n int, str string, i *[]string) {
+func generate(left int, right int, n int, str string) {
 	if left == n && right == n {
-		*i = append(*i, str)
+		arr = append(arr, str)
 		return
 	}
 	 if left < n {
-		 generate(left + 1, right, n, str + "(", i)
+		 generate(left + 1, right, n, str + "(")
 	 }
 	if right < left {
-		generate(left, right + 1, n, str + ")", i)
+		generate(left, right + 1, n, str + ")")
 	}
-}
-
-
-func main()  {
-	n := 3
-	arr := generateParenthesis(n)
-	fmt.Println(arr)
 }
