@@ -28,7 +28,7 @@ func generateParenthesis(n int) []string {
 }
 
 func generate(left int, right int, n int, str string) {
-	if left == n && right == n {
+	if len(str) == 2*n {
 		arr = append(arr, str)
 		return
 	}
