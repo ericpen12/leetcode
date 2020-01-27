@@ -23,6 +23,7 @@
 | 题号 | 难度 | 原题链接                                                     | 题解                                             |
 | ---- | ---- | ------------------------------------------------------------ | ------------------------------------------------ |
 | 22   | 中等 | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/) | [括号生成](src/generate-parentheses/solution.md) |
+| 226  | 简单 | [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [翻转二叉树](src/invert-binary-tree/solution.md) |
 
 
 
