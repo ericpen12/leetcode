@@ -2,6 +2,7 @@ package _30_surrounded_regions
 
 var p = []int{0, 0, -1, 1}
 
+// bfs
 func solve(board [][]byte) {
 	if len(board) < 1 || len(board[0]) < 1 {
 		return
@@ -10,10 +11,19 @@ func solve(board [][]byte) {
 
 	var queue [][]int
 	for i := 0; i < h; i++ {
-		for j := 0; j < w; j++ {
-			if (i == 0 || j == 0 || i == h-1 || j == w-1) && board[i][j] == 'O' {
-				queue = append(queue, []int{i, j})
-			}
+		if board[i][0] == 'O' {
+			queue = append(queue, []int{i, 0})
+		}
+		if board[i][w-1] == 'O' {
+			queue = append(queue, []int{i, w - 1})
+		}
+	}
+	for j := 0; j < w; j++ {
+		if board[0][j] == 'O' {
+			queue = append(queue, []int{0, j})
+		}
+		if board[h-1][j] == 'O' {
+			queue = append(queue, []int{h - 1, j})
 		}
 	}
 
